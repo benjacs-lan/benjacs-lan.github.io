@@ -1,11 +1,24 @@
-// Import AOS library
-import AOS from "aos"
+// Import necessary libraries
 
-// Initialize AOS (Animate On Scroll)
-AOS.init({
-  duration: 1000,
-  once: true,
-  offset: 100,
+// Initialize animations with Intersection Observer
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -100px 0px",
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("aos-animate")
+      observer.unobserve(entry.target)
+    }
+  })
+}, observerOptions)
+
+// Observe all elements with data-aos attribute
+document.addEventListener("DOMContentLoaded", () => {
+  const animatedElements = document.querySelectorAll("[data-aos]")
+  animatedElements.forEach((el) => observer.observe(el))
 })
 
 // Navbar scroll effect
@@ -248,3 +261,4 @@ console.log(
   "color: #00ff88; font-size: 14px;",
 )
 console.log("%calex@devops.com", "color: #ffffff; font-size: 14px;")
+
