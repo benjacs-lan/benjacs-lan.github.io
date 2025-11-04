@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ben Jacs - DevOps & Ciberseguridad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Ben Jacs</div>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#certs">Certificaciones</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <button class="dark-toggle"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero-content">
+      <h1><span class="gradient-text">DevOps & Ciberseguridad</span></h1>
+      <p>Automatización | Cloud | Protección digital</p>
+      <a href="#contact" class="cta-btn">Contáctame</a>
+    </div>
+    <div class="hero-bg"></div>
+  </header>
+  <main>
+    <section id="about" class="card">
+      <h2>Sobre mí</h2>
+      <p>
+        Ingeniero apasionado por DevOps y Ciberseguridad. Experto en automatización de pipelines, infraestructura como código y defensa digital. Mi objetivo es asegurar sistemas robustos y escalables en la nube.
+      </p>
+    </section>
+    <section id="skills" class="card">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+        <div class="skill"><i class="fas fa-server"></i> Kubernetes</div>
+        <div class="skill"><i class="fas fa-cloud"></i> AWS / Azure / GCP</div>
+        <div class="skill"><i class="fas fa-code"></i> Terraform</div>
+        <div class="skill"><i class="fas fa-cogs"></i> CI/CD</div>
+        <div class="skill"><i class="fas fa-shield-alt"></i> Seguridad (Firewall, SIEM, IDS/IPS)</div>
+        <div class="skill"><i class="fas fa-terminal"></i> Scripting (Bash, Python, PowerShell)</div>
+      </div>
+    </section>
+    <section id="projects" class="card">
+      <h2>Proyectos destacados</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3><i class="fas fa-cloud-upload-alt"></i> IaC en Azure</h3>
+          <p>Automatización de despliegues cloud con Terraform y Kubernetes para microservicios seguros.</p>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-lock"></i> Pipeline DevSecOps</h3>
+          <p>Implementación de integraciones CI/CD seguras con monitoreo continuo y despliegue en AWS.</p>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-search"></i> SIEM & Hardenización</h3>
+          <p>Configuración de Splunk y Wazuh para análisis de logs y detección proactiva de amenazas.</p>
+        </div>
+      </div>
+    </section>
+    <section id="certs" class="card">
+      <h2>Certificaciones</h2>
+      <ul class="cert-list">
+        <li><i class="fas fa-certificate"></i> CKA (Kubernetes Admin)</li>
+        <li><i class="fas fa-certificate"></i> AWS Solutions Architect</li>
+        <li><i class="fas fa-certificate"></i> Microsoft AZ-500</li>
+        <li><i class="fas fa-certificate"></i> CompTIA Security+</li>
+      </ul>
+    </section>
+    <section id="contact" class="card">
+      <h2>Contacto</h2>
+      <form action="mailto:tucorreo@ejemplo.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="message" rows="4" placeholder="¿En qué puedo ayudarte?"></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+      </form>
+      <div class="social">
+        <a href="https://github.com/benjacs-lan" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/benjacslan" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Ben Jacs. Portfolio DevOps & Ciberseguridad</p>
+  </footer>
+  <script>
+    const darkToggle = document.querySelector('.dark-toggle');
+    darkToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      darkToggle.innerHTML = document.body.classList.contains('dark') 
+        ? '<i class="fas fa-sun"></i>' 
+        : '<i class="fas fa-moon"></i>';
+    });
+  </script>
+</body>
+</html>
