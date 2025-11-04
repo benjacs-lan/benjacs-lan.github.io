@@ -1,104 +1,630 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Ben Jacs - DevOps & Ciberseguridad</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps & Cybersecurity Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo">Ben Jacs</div>
-      <ul>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#certs">Certificaciones</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-      <button class="dark-toggle"><i class="fas fa-moon"></i></button>
-    </div>
-  </nav>
-  <header class="hero">
-    <div class="hero-content">
-      <h1><span class="gradient-text">DevOps & Ciberseguridad</span></h1>
-      <p>Automatización | Cloud | Protección digital</p>
-      <a href="#contact" class="cta-btn">Contáctame</a>
-    </div>
-    <div class="hero-bg"></div>
-  </header>
-  <main>
-    <section id="about" class="card">
-      <h2>Sobre mí</h2>
-      <p>
-        Ingeniero apasionado por DevOps y Ciberseguridad. Experto en automatización de pipelines, infraestructura como código y defensa digital. Mi objetivo es asegurar sistemas robustos y escalables en la nube.
-      </p>
-    </section>
-    <section id="skills" class="card">
-      <h2>Habilidades</h2>
-      <div class="skills-grid">
-        <div class="skill"><i class="fab fa-docker"></i> Docker</div>
-        <div class="skill"><i class="fas fa-server"></i> Kubernetes</div>
-        <div class="skill"><i class="fas fa-cloud"></i> AWS / Azure / GCP</div>
-        <div class="skill"><i class="fas fa-code"></i> Terraform</div>
-        <div class="skill"><i class="fas fa-cogs"></i> CI/CD</div>
-        <div class="skill"><i class="fas fa-shield-alt"></i> Seguridad (Firewall, SIEM, IDS/IPS)</div>
-        <div class="skill"><i class="fas fa-terminal"></i> Scripting (Bash, Python, PowerShell)</div>
-      </div>
-    </section>
-    <section id="projects" class="card">
-      <h2>Proyectos destacados</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3><i class="fas fa-cloud-upload-alt"></i> IaC en Azure</h3>
-          <p>Automatización de despliegues cloud con Terraform y Kubernetes para microservicios seguros.</p>
+<body data-theme="dark">
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-terminal"></i> DevSecOps
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="project-card">
-          <h3><i class="fas fa-lock"></i> Pipeline DevSecOps</h3>
-          <p>Implementación de integraciones CI/CD seguras con monitoreo continuo y despliegue en AWS.</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <div class="hero-content">
+                        <h1 class="display-3 fw-bold mb-3">
+                            <span class="text-gradient">Alex Rodríguez</span>
+                        </h1>
+                        <h2 class="h3 mb-4 text-secondary">
+                            <span class="typing-text">DevOps Engineer | Cybersecurity Specialist</span>
+                        </h2>
+                        <p class="lead mb-5">
+                            Me apasiona automatizar, proteger y optimizar infraestructuras en la nube. 
+                            Especializado en crear pipelines seguros y resilientes con enfoque DevSecOps.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary btn-lg me-3" download>
+                                <i class="fas fa-download me-2"></i>Descargar CV
+                            </a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-envelope me-2"></i>Contáctame
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-          <h3><i class="fas fa-search"></i> SIEM & Hardenización</h3>
-          <p>Configuración de Splunk y Wazuh para análisis de logs y detección proactiva de amenazas.</p>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
-      </div>
     </section>
-    <section id="certs" class="card">
-      <h2>Certificaciones</h2>
-      <ul class="cert-list">
-        <li><i class="fas fa-certificate"></i> CKA (Kubernetes Admin)</li>
-        <li><i class="fas fa-certificate"></i> AWS Solutions Architect</li>
-        <li><i class="fas fa-certificate"></i> Microsoft AZ-500</li>
-        <li><i class="fas fa-certificate"></i> CompTIA Security+</li>
-      </ul>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Alex Rodríguez" class="img-fluid rounded-4 shadow-lg">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <h2 class="section-title mb-4">Sobre mí</h2>
+                    <p class="mb-3">
+                        Soy un profesional apasionado por la intersección entre desarrollo, operaciones y seguridad. 
+                        Con más de 5 años de experiencia en el campo, he trabajado en la implementación de 
+                        infraestructuras cloud-native, automatización de procesos y fortalecimiento de la seguridad 
+                        en entornos de producción.
+                    </p>
+                    <p class="mb-3">
+                        Mi enfoque DevSecOps me permite integrar la seguridad desde las primeras etapas del desarrollo, 
+                        garantizando que cada pipeline, cada contenedor y cada despliegue cumplan con los más altos 
+                        estándares de seguridad sin sacrificar la velocidad de entrega.
+                    </p>
+                    <p class="mb-4">
+                        Especializado en tecnologías como Docker, Kubernetes, Terraform y AWS, también poseo 
+                        experiencia en pentesting, análisis de vulnerabilidades y respuesta a incidentes de seguridad.
+                    </p>
+                    <div class="about-stats row g-3">
+                        <div class="col-6 col-md-3">
+                            <div class="stat-card">
+                                <h3 class="stat-number">5+</h3>
+                                <p class="stat-label">Años Experiencia</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-card">
+                                <h3 class="stat-number">50+</h3>
+                                <p class="stat-label">Proyectos</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-card">
+                                <h3 class="stat-number">15+</h3>
+                                <p class="stat-label">Certificaciones</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-card">
+                                <h3 class="stat-number">100%</h3>
+                                <p class="stat-label">Dedicación</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="contact" class="card">
-      <h2>Contacto</h2>
-      <form action="mailto:tucorreo@ejemplo.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu email" required>
-        <textarea name="message" rows="4" placeholder="¿En qué puedo ayudarte?"></textarea>
-        <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
-      </form>
-      <div class="social">
-        <a href="https://github.com/benjacs-lan" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/benjacslan" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-dark-alt">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Habilidades Técnicas</h2>
+            
+            <div class="row g-4">
+                <!-- DevOps Tools -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-4"><i class="fas fa-cogs me-2 text-primary"></i>DevOps & Cloud</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fab fa-docker"></i> Docker</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fab fa-aws"></i> AWS</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-cube"></i> Terraform</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-project-diagram"></i> Jenkins</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Tools -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-4"><i class="fas fa-shield-alt me-2 text-success"></i>Cybersecurity</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-user-secret"></i> Pentesting</span>
+                                <span>87%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-fire"></i> Firewalls</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-chart-line"></i> SIEM</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-bug"></i> Vulnerability Analysis</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-lock"></i> Security Hardening</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming & Scripting -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-4"><i class="fas fa-code me-2 text-info"></i>Programming & Scripting</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fab fa-python"></i> Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-terminal"></i> Bash</span>
+                                <span>93%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 93%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fab fa-git-alt"></i> Git</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Automation -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-category">
+                        <h3 class="h5 mb-4"><i class="fas fa-robot me-2 text-warning"></i>Automation & IaC</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-server"></i> Ansible</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fab fa-linux"></i> Linux</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span><i class="fas fa-network-wired"></i> CI/CD</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Ben Jacs. Portfolio DevOps & Ciberseguridad</p>
-  </footer>
-  <script>
-    const darkToggle = document.querySelector('.dark-toggle');
-    darkToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      darkToggle.innerHTML = document.body.classList.contains('dark') 
-        ? '<i class="fas fa-sun"></i>' 
-        : '<i class="fas fa-moon"></i>';
-    });
-  </script>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Proyectos Destacados</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="/placeholder.svg?height=300&width=500" alt="Kubernetes Cluster" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-light btn-sm me-2"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="h5 mb-2">Infraestructura Cloud Multi-Región</h3>
+                            <p class="text-muted mb-3">
+                                Implementación de infraestructura altamente disponible en AWS usando Terraform, 
+                                con clusters Kubernetes multi-región y balanceo de carga global.
+                            </p>
+                            <div class="project-tags">
+                                <span class="badge">AWS</span>
+                                <span class="badge">Terraform</span>
+                                <span class="badge">Kubernetes</span>
+                                <span class="badge">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="/placeholder.svg?height=300&width=500" alt="Security Pipeline" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-light btn-sm me-2"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="h5 mb-2">Pipeline CI/CD con Seguridad Integrada</h3>
+                            <p class="text-muted mb-3">
+                                Pipeline automatizado con Jenkins que incluye análisis de vulnerabilidades, 
+                                escaneo de contenedores y pruebas de seguridad en cada etapa del despliegue.
+                            </p>
+                            <div class="project-tags">
+                                <span class="badge">Jenkins</span>
+                                <span class="badge">SonarQube</span>
+                                <span class="badge">Trivy</span>
+                                <span class="badge">GitLab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="/placeholder.svg?height=300&width=500" alt="SIEM System" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-light btn-sm me-2"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="h5 mb-2">Sistema SIEM Personalizado</h3>
+                            <p class="text-muted mb-3">
+                                Implementación de sistema de monitoreo y análisis de eventos de seguridad 
+                                con ELK Stack, incluyendo alertas automatizadas y dashboards personalizados.
+                            </p>
+                            <div class="project-tags">
+                                <span class="badge">Elasticsearch</span>
+                                <span class="badge">Logstash</span>
+                                <span class="badge">Kibana</span>
+                                <span class="badge">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="/placeholder.svg?height=300&width=500" alt="Automation Scripts" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-light btn-sm me-2"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="h5 mb-2">Automatización de Hardening de Servidores</h3>
+                            <p class="text-muted mb-3">
+                                Suite de scripts en Ansible y Python para automatizar el hardening de servidores Linux 
+                                siguiendo estándares CIS y mejores prácticas de seguridad.
+                            </p>
+                            <div class="project-tags">
+                                <span class="badge">Ansible</span>
+                                <span class="badge">Python</span>
+                                <span class="badge">Bash</span>
+                                <span class="badge">Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding bg-dark-alt">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Certificaciones</h2>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h4 class="h6 mb-2">AWS Certified Solutions Architect</h4>
+                        <p class="text-muted small">Amazon Web Services</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Certified Ethical Hacker (CEH)</h4>
+                        <p class="text-muted small">EC-Council</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="h6 mb-2">CompTIA Security+</h4>
+                        <p class="text-muted small">CompTIA</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-dharmachakra"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Certified Kubernetes Administrator</h4>
+                        <p class="text-muted small">CNCF</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Docker Certified Associate</h4>
+                        <p class="text-muted small">Docker Inc.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h4 class="h6 mb-2">HashiCorp Certified: Terraform Associate</h4>
+                        <p class="text-muted small">HashiCorp</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4 class="h6 mb-2">CISSP</h4>
+                        <p class="text-muted small">(ISC)²</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Linux Professional Institute</h4>
+                        <p class="text-muted small">LPI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Contacto</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3 class="h4 mb-4">¿Hablamos?</h3>
+                        <p class="mb-4">
+                            Estoy disponible para proyectos freelance, colaboraciones o simplemente 
+                            para charlar sobre DevOps, seguridad y tecnología. No dudes en contactarme.
+                        </p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <a href="mailto:alex@devops.com">alex@devops.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Ubicación</h5>
+                                <p>Madrid, España</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <p class="mb-0">&copy; 2025 Alex Rodríguez. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a href="#home" class="footer-link">Inicio</a>
+                    <a href="#about" class="footer-link">Sobre mí</a>
+                    <a href="#skills" class="footer-link">Habilidades</a>
+                    <a href="#projects" class="footer-link">Proyectos</a>
+                    <a href="#contact" class="footer-link">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
+
