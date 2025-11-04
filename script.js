@@ -261,4 +261,3 @@ console.log(
   "color: #00ff88; font-size: 14px;",
 )
 console.log("%calex@devops.com", "color: #ffffff; font-size: 14px;")
-
